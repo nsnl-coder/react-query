@@ -1,6 +1,15 @@
-function App() {
+import { Route, Routes } from 'react-router-dom';
+import Home from './pages/home/Home';
+import Todos from './pages/todos/Todos';
+
+function App(): JSX.Element {
   return (
-    <h1 className="text-3xl font-bold underline text-red-400">Hello world!</h1>
+    <div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/todos" element={<Todos />} />
+      </Routes>
+    </div>
   );
 }
 
